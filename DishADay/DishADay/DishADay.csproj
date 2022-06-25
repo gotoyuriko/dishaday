@@ -1,0 +1,460 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{749405EA-E9BF-4665-B1EB-B6B819689FF5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DishADay</RootNamespace>
+    <AssemblyName>DishADay</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="01_home.aspx" />
+    <Content Include="02_recipe_gallery.aspx" />
+    <Content Include="03_recipe.aspx" />
+    <Content Include="04_user_profile_recipe.aspx" />
+    <Content Include="05_user_profile_cooking_history.aspx" />
+    <Content Include="06_recipe_upload.aspx" />
+    <Content Include="07_recipe_modify.aspx" />
+    <Content Include="08_FAQ_enquiry_form.aspx" />
+    <Content Include="09_admin_home.aspx" />
+    <Content Include="10_admin_recipe_approval_list.aspx" />
+    <Content Include="11_admin_recipe_approval.aspx" />
+    <Content Include="12_admin_enquiry.aspx" />
+    <Content Include="13_admin_report_recipe.aspx" />
+    <Content Include="14_admin_report_comment.aspx" />
+    <Content Include="15_admin_info_recipe.aspx" />
+    <Content Include="16_admin_info_user.aspx" />
+    <Content Include="17_login.aspx" />
+    <Content Include="18_signup.aspx" />
+    <Content Include="19_logout.aspx" />
+    <Content Include="20_recipe_delete_user.aspx" />
+    <Content Include="21_recipe_skip_admin.aspx" />
+    <Content Include="23_comment_skip_admin.aspx" />
+    <Content Include="24_comment_delete_admin.aspx" />
+    <Content Include="25_enquiry_delete_admin.aspx" />
+    <Content Include="26_recipe_approve.aspx" />
+    <Content Include="27_recipe_reject.aspx" />
+    <Content Include="28_report_recipe.aspx" />
+    <Content Include="29_report_comment.aspx" />
+    <Content Include="30_cooking_session.aspx" />
+    <Content Include="31_cooking_session_timer.aspx" />
+    <Content Include="32_cooking_session_note.aspx" />
+    <Content Include="33_comment_delete_user.aspx" />
+    <Content Include="34_history_delete_user.aspx" />
+    <Content Include="App_Data\dish_a_day.mdf" />
+    <Content Include="App_Data\dish_a_day_log.ldf">
+      <DependentUpon>dish_a_day.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\aglio_olio.jpeg" />
+    <Content Include="assets\chicken-teriyaki.jpeg" />
+    <Content Include="assets\cooking-start.png" />
+    <Content Include="assets\DishADayUploadImageDefalut.png" />
+    <Content Include="assets\explore recipe.jpg" />
+    <Content Include="assets\explore recipe2.jpg" />
+    <Content Include="assets\favicon.ico" />
+    <Content Include="assets\favicon_io\android-chrome-192x192.png" />
+    <Content Include="assets\favicon_io\android-chrome-512x512.png" />
+    <Content Include="assets\favicon_io\apple-touch-icon.png" />
+    <Content Include="assets\favicon_io\favicon-16x16.png" />
+    <Content Include="assets\favicon_io\favicon-32x32.png" />
+    <Content Include="assets\foodiesfeed.com_forest-fruit-waffle.jpg" />
+    <Content Include="assets\foodiesfeed.com_fresh-oranges.jpg" />
+    <Content Include="assets\foodiesfeed.com_oranges-with-ice.jpg" />
+    <Content Include="assets\home-bg.jpg" />
+    <Content Include="assets\home_public\food-fruit-healthy-acorn-wallpaper-preview.jpg" />
+    <Content Include="assets\home_public\guidance.jpg" />
+    <Content Include="assets\home_public\images.jpg" />
+    <Content Include="assets\home_public\istockphoto-1363638825-170667a.jpg" />
+    <Content Include="assets\home_public\notes.jpg" />
+    <Content Include="assets\home_public\pexels-photo-1435895.jpeg" />
+    <Content Include="assets\home_public\timer.png" />
+    <Content Include="assets\Kitchen_sound.mp3" />
+    <Content Include="assets\login-bg.jpg" />
+    <Content Include="assets\okonomiyaki.jpg" />
+    <Content Include="assets\signup-bg.jpg" />
+    <Content Include="assets\small.png" />
+    <Content Include="assets\trans.png" />
+    <Content Include="assets\undraw_cooking_lyxy.png" />
+    <Content Include="custom.js" />
+    <Content Include="22_recipe_delete_admin.aspx" />
+    <Content Include="style.css" />
+    <Content Include="test.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01_home.aspx.cs">
+      <DependentUpon>01_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01_home.aspx.designer.cs">
+      <DependentUpon>01_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_recipe_gallery.aspx.cs">
+      <DependentUpon>02_recipe_gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02_recipe_gallery.aspx.designer.cs">
+      <DependentUpon>02_recipe_gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_recipe.aspx.cs">
+      <DependentUpon>03_recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="03_recipe.aspx.designer.cs">
+      <DependentUpon>03_recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="04_user_profile_recipe.aspx.cs">
+      <DependentUpon>04_user_profile_recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="04_user_profile_recipe.aspx.designer.cs">
+      <DependentUpon>04_user_profile_recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="05_user_profile_cooking_history.aspx.cs">
+      <DependentUpon>05_user_profile_cooking_history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="05_user_profile_cooking_history.aspx.designer.cs">
+      <DependentUpon>05_user_profile_cooking_history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="06_recipe_upload.aspx.cs">
+      <DependentUpon>06_recipe_upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="06_recipe_upload.aspx.designer.cs">
+      <DependentUpon>06_recipe_upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="07_recipe_modify.aspx.cs">
+      <DependentUpon>07_recipe_modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="07_recipe_modify.aspx.designer.cs">
+      <DependentUpon>07_recipe_modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="08_FAQ_enquiry_form.aspx.cs">
+      <DependentUpon>08_FAQ_enquiry_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="08_FAQ_enquiry_form.aspx.designer.cs">
+      <DependentUpon>08_FAQ_enquiry_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="09_admin_home.aspx.cs">
+      <DependentUpon>09_admin_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="09_admin_home.aspx.designer.cs">
+      <DependentUpon>09_admin_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="10_admin_recipe_approval_list.aspx.cs">
+      <DependentUpon>10_admin_recipe_approval_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="10_admin_recipe_approval_list.aspx.designer.cs">
+      <DependentUpon>10_admin_recipe_approval_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="11_admin_recipe_approval.aspx.cs">
+      <DependentUpon>11_admin_recipe_approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="11_admin_recipe_approval.aspx.designer.cs">
+      <DependentUpon>11_admin_recipe_approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="12_admin_enquiry.aspx.cs">
+      <DependentUpon>12_admin_enquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="12_admin_enquiry.aspx.designer.cs">
+      <DependentUpon>12_admin_enquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="13_admin_report_recipe.aspx.cs">
+      <DependentUpon>13_admin_report_recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="13_admin_report_recipe.aspx.designer.cs">
+      <DependentUpon>13_admin_report_recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="14_admin_report_comment.aspx.cs">
+      <DependentUpon>14_admin_report_comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="14_admin_report_comment.aspx.designer.cs">
+      <DependentUpon>14_admin_report_comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="15_admin_info_recipe.aspx.cs">
+      <DependentUpon>15_admin_info_recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="15_admin_info_recipe.aspx.designer.cs">
+      <DependentUpon>15_admin_info_recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="16_admin_info_user.aspx.cs">
+      <DependentUpon>16_admin_info_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="16_admin_info_user.aspx.designer.cs">
+      <DependentUpon>16_admin_info_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="17_login.aspx.cs">
+      <DependentUpon>17_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="17_login.aspx.designer.cs">
+      <DependentUpon>17_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="18_signup.aspx.cs">
+      <DependentUpon>18_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="18_signup.aspx.designer.cs">
+      <DependentUpon>18_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="19_logout.aspx.cs">
+      <DependentUpon>19_logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="19_logout.aspx.designer.cs">
+      <DependentUpon>19_logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="20_recipe_delete_user.aspx.cs">
+      <DependentUpon>20_recipe_delete_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="20_recipe_delete_user.aspx.designer.cs">
+      <DependentUpon>20_recipe_delete_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="21_recipe_skip_admin.aspx.cs">
+      <DependentUpon>21_recipe_skip_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="21_recipe_skip_admin.aspx.designer.cs">
+      <DependentUpon>21_recipe_skip_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="22_recipe_delete_admin.aspx.cs">
+      <DependentUpon>22_recipe_delete_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="22_recipe_delete_admin.aspx.designer.cs">
+      <DependentUpon>22_recipe_delete_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="23_comment_skip_admin.aspx.cs">
+      <DependentUpon>23_comment_skip_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="23_comment_skip_admin.aspx.designer.cs">
+      <DependentUpon>23_comment_skip_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="24_comment_delete_admin.aspx.cs">
+      <DependentUpon>24_comment_delete_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="24_comment_delete_admin.aspx.designer.cs">
+      <DependentUpon>24_comment_delete_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="25_enquiry_delete_admin.aspx.cs">
+      <DependentUpon>25_enquiry_delete_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="25_enquiry_delete_admin.aspx.designer.cs">
+      <DependentUpon>25_enquiry_delete_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="26_recipe_approve.aspx.cs">
+      <DependentUpon>26_recipe_approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="26_recipe_approve.aspx.designer.cs">
+      <DependentUpon>26_recipe_approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="27_recipe_reject.aspx.cs">
+      <DependentUpon>27_recipe_reject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="27_recipe_reject.aspx.designer.cs">
+      <DependentUpon>27_recipe_reject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="28_report_recipe.aspx.cs">
+      <DependentUpon>28_report_recipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="28_report_recipe.aspx.designer.cs">
+      <DependentUpon>28_report_recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="29_report_comment.aspx.cs">
+      <DependentUpon>29_report_comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="29_report_comment.aspx.designer.cs">
+      <DependentUpon>29_report_comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="30_cooking_session.aspx.cs">
+      <DependentUpon>30_cooking_session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="30_cooking_session.aspx.designer.cs">
+      <DependentUpon>30_cooking_session.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="31_cooking_session_timer.aspx.cs">
+      <DependentUpon>31_cooking_session_timer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="31_cooking_session_timer.aspx.designer.cs">
+      <DependentUpon>31_cooking_session_timer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="32_cooking_session_note.aspx.cs">
+      <DependentUpon>32_cooking_session_note.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="32_cooking_session_note.aspx.designer.cs">
+      <DependentUpon>32_cooking_session_note.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="33_comment_delete_user.aspx.cs">
+      <DependentUpon>33_comment_delete_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="33_comment_delete_user.aspx.designer.cs">
+      <DependentUpon>33_comment_delete_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="34_history_delete_user.aspx.cs">
+      <DependentUpon>34_history_delete_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="34_history_delete_user.aspx.designer.cs">
+      <DependentUpon>34_history_delete_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\favicon_io\site.webmanifest" />
+    <Content Include="assets\digital-timer.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\DishADay - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\recipe_upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63575</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

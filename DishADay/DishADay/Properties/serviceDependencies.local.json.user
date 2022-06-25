@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-06-25T10:15:24.8080209Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-06-25T10:15:24.6389736Z"
+    }
+  },
+  "parameters": {
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "453cea7b-9a02-4874-b5d3-86fcaa5a9115"
+    }
+  }
+}

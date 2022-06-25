@@ -1,0 +1,1405 @@
+/* COLOR REFERENCE */
+/*
+  oragne: var(--orange)
+  sarmon: var(--sarmon)
+  vanilla white: var(--vanilla-white)
+  dark brown: var(--dark-brown)
+*/
+
+/*FONT REFERENCE*/
+/*
+  Roboto Regular 400 Italic
+  Roboto Bold 700 Italic
+  Noto Sans SemiBold 600 Italic
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,600&family=Roboto:ital,wght@1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap");
+
+/*Lato*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+
+@font-face {
+    font-family: digitalTimer;
+    src: url(./ASSETS/digital-timer.otf);
+}
+/*
+  font-family: var(--noto-sans);
+  font-family: var(--roboto);
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Abel', sans-serif;
+*/
+
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+    --orange: #ff6f3d;
+    --sarmon: #ffbfaa;
+    --vanilla-white: #fbf9ee;
+    --dark-brown: #54494b;
+    --noto-sans: "Noto Sans", sans-serif;
+    --roboto: "Roboto", sans-serif;
+}
+
+/* === GENERAL === */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.btn:focus,
+.btn:active {
+    color: var(--orange);
+    border: var(--orange) 1px solid !important;
+    outline: none !important;
+}
+
+.vanilla-bg {
+    background-color: var(--vanilla-white);
+}
+
+/*=== Header and Footer Christian Tjandra Nathaniel ===*/
+.navbar {
+    box-shadow: 10px 0 5px rgb(0, 0, 0);
+}
+
+.user-btn {
+    text-decoration: none;
+    font-size: 1em;
+    border: 2px solid var(--orange) !important;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    transition: .1s all ease-in;
+    color: var(--orange);
+    transition: .1s all ease-in;
+}
+
+
+    .user-btn:hover {
+        background: var(--orange);
+        color: white;
+    }
+
+
+.loginsignup-button {
+    border: solid 1px var(--orange);
+    color: var(--orange);
+}
+
+    .loginsignup-button:hover,
+    .loginsignup-button:active .loginsignup-button:visited {
+        background-color: var(--orange) !important;
+        color: var(--vanilla-white) !important;
+        cursor: pointer;
+    }
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--sarmon);
+}
+
+    footer a {
+        color: var(--dark-brown);
+        font-size: 1.2em;
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+    }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+    footer h1 {
+        font-size: 35px;
+    }
+
+    footer .row {
+        border-bottom: 5px solid var(--dark-brown);
+        width: 100%;
+    }
+
+/* .footer-hr {
+  border-top: 10px solid black !important;
+  opacity: 0.5;
+  width: 100%;
+} */
+
+.footer-cr p {
+    text-align: center;
+    font-size: 17px;
+    font-family: var(--roboto);
+    padding-top: 10px;
+}
+
+/* =============Home_Public============== */
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url("./assets/home-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.home-search {
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--vanilla-white);
+    margin: 10px;
+    padding: 10% 10%;
+    /* padding-top: 15%;
+  padding-bottom: 15%; */
+    width: 70%;
+}
+
+.home-search {
+    color: var(--dark-brown);
+    /*line-break: 2px;*/
+}
+
+#homeSearchButton:hover {
+    background-color: #ff6d3da8;
+    border-color: #ff6d3da8;
+    color: var(--black);
+}
+
+#homeSearchButton {
+    background-color: var(--orange);
+    color: white;
+}
+
+.home-content {
+    width: 100%;
+    height: 100%;
+}
+
+    .home-content img {
+        object-fit: cover;
+        border-radius: 50% !important;
+        width: 250px;
+        height: 250px;
+    }
+
+.home-content-text {
+    text-align: center;
+    padding-left: 10%;
+}
+
+.home-first-text,
+.home-second-text {
+    font-family: "Bebas Neue", cursive;
+    padding-top: 20px;
+}
+
+.home-third-text {
+    font-family: "Bebas Neue", cursive;
+    padding-top: 20px;
+}
+
+.home-recipes-title {
+    font-family: "Bebas Neue", cursive;
+    font-size: 50px;
+    padding-top: 15%;
+}
+
+.home-image-button {
+    object-fit: cover;
+}
+
+    .home-image-button img {
+        width: 300px;
+        height: 300px;
+    }
+
+.home-recipe-text {
+    text-align: center;
+    font-family: "Abel", sans-serif;
+    font-size: 2rem;
+    color: #000 !important;
+}
+
+.home-img-animation{
+    object-fit:cover;
+}
+
+.home-img-animation:hover {
+    opacity: 0.8;
+    transition: opacity ease-in-out 0.5s;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.home-more-recipe a {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+    padding-top: 5%;
+    cursor: pointer;
+    color: var(--orange);
+}
+
+    .home-more-recipe a:hover {
+        color: var(--orange);
+        font-size: 50px;
+        transition: ease-in-out 0.5s;
+    }
+
+.home-session-title {
+    font-size: 60px;
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.home-more-recipes {
+    width: 100%;
+    height: 100%;
+}
+
+    .home-more-recipes img {
+        object-fit: cover;
+        border-radius: 50% !important;
+        width: 250px;
+        height: 250px;
+    }
+/*=== Recipe Gallery Goh Kai Ling ===*/
+.recipe-gallery-wrap {
+    padding: 15vh 15% 15vh;
+}
+
+/* search box */
+.recipe-gallery-search {
+    margin-bottom: 30px;
+}
+
+#recipe_search_btn {
+    background-color: var(--orange);
+    color: var(--vanilla-white);
+    border: none;
+    border-radius: 3px;
+    padding: 2px 20px;
+}
+
+
+    #recipe_search_btn:hover {
+        background-color: #ff6d3da8;
+        color: var(--black);
+    }
+
+/* gallery content */
+.recipe-gallery-wrap .col {
+    margin-bottom: 40px;
+}
+
+.recipe-gallery-option {
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 1px 10px 0 var(--dark-brown);
+}
+
+    .recipe-gallery-option:hover {
+        color: black;
+        transform: scale(105%);
+        box-shadow: 0 5px 20px 3px var(--dark-brown);
+        transition: 0.2s;
+    }
+
+    .recipe-gallery-option img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+/*=== Recipe Page Yuriko Goto ===*/
+
+/* Recipe Hero */
+.recipe-content-wrap {
+    padding: 15vh 15% 5vh;
+}
+
+.recipe-content-wrap2 {
+    padding: 5vh 15%;
+}
+
+.recipe-content-wrap {
+    background: var(--vanilla-white);
+}
+
+li.breadcrumb-item > a {
+    color: orange;
+}
+
+.recipe-hero-wrap img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.recipe-hero-wrap h1 {
+    font-family: var(--noto-sans);
+    line-height: 44px;
+    text-align: start;
+    letter-spacing: -1.7px;
+}
+
+.recipe-attribute {
+    padding: 0;
+}
+
+p.recipe-fullname,
+p.recipe-username,
+p.recipe-date,
+p.recipe-cook {
+    margin: 0;
+}
+
+p.recipe-username {
+    color: gray;
+}
+
+.recipe-username a{
+    text-decoration:none;
+    color:var(--orange) !important;
+}
+
+p.recipe-fullname {
+    font-size: 1.2em;
+}
+
+p.recipe-caption {
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*Recipe ingredients*/
+.recipe-content-wrap2 {
+    background: #ffffff;
+    position: relative;
+}
+
+    /* border specification */
+    .recipe-content-wrap2::before {
+        content: "";
+        background-color: rgba(84, 73, 75, 0.5);
+        /* var(--dark-brown) */
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 1px;
+        width: 70%;
+    }
+
+.recipe-ingredient-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5em;
+}
+
+    .recipe-ingredient-list li,
+    .recipe-step-list li {
+        font-size: 18px;
+        border-top: dotted 1px rgba(84, 73, 75, 0.5);
+        padding-top: 0.8em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+        .recipe-ingredient-list li:first-child,
+        .recipe-step-list li:first-child {
+            border-top: none;
+        }
+
+/*Recipe Steps*/
+/* Counter Number */
+.recipe-step-list {
+    margin: 0;
+    list-style: none;
+    counter-reset: recipe-step-number;
+}
+
+    .recipe-step-list li {
+        position: relative;
+        margin-left: 1em;
+        padding-top: 0.8em;
+    }
+
+        .recipe-step-list li::before {
+            counter-increment: recipe-step-number;
+            content: counter(recipe-step-number);
+            /* step list number decoration */
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 10px;
+            margin-top: 0.9em;
+            font-size: 16px;
+            background-color: var(--dark-brown);
+            color: #fff;
+            line-height: 25px;
+        }
+
+.comment-card {
+    margin: 2.5vh 5%;
+}
+
+.user-comment-name,
+.user-comment-name:hover,
+.user-comment-name:active{
+    color:var(--orange);
+    text-decoration:none;
+}
+
+
+/*Recipe Registered users*/
+/* top of image */
+.recipe-top-of-image {
+    /* background-color: var(--sarmon); */
+    background-color: #fff;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    /* box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.5),
+    inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5); */
+}
+
+.fa-ellipsis {
+    color: var(--dark-brown);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+    .fa-ellipsis:hover {
+        cursor: pointer;
+        color: #000;
+    }
+
+/* start cooking session button */
+.start-cooking-session-button > button {
+    border: solid 2px var(--orange);
+    background-color: #fff;
+    color: var(--orange);
+    font-family: var(--roboto);
+    font-weight: bold;
+}
+
+    .start-cooking-session-button > button:hover {
+        background-color: var(--orange);
+        color: #fff;
+    }
+
+/* comments */
+
+
+
+.comment-add {
+    padding: 2.5vh 5%;
+}
+
+.add-comment-button {
+    background-color: var(--orange);
+    color: var(--vanilla-white);
+    border: none;
+}
+
+    .add-comment-button:hover {
+        background-color: #ff6d3da8;
+        color: var(--black);
+    }
+
+.fa-paper-plane,
+.fa-paper-plane:hover {
+    color: #fff;
+}
+
+/* === RECIPE COOKING SESSION MODAL === */
+.cooking-session-modal img {
+    opacity: 0.5;
+    display: block;
+    position: relative;
+}
+
+.start-cooking-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* COOKING SESSION PROGRESS STEP */
+.progress-bar {
+    width: 25%;
+    background-color: var(--orange);
+}
+
+.step-button button {
+    background-color: var(--orange);
+    color: white;
+}
+
+    .step-button button:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+/*=== Profile Page Goh Kai Ling ===*/
+/* profile info */
+.profile-info-box {
+    background-color: var(--dark-brown);
+    color: var(--vanilla-white);
+    width: 100%;
+}
+
+.profile-info {
+    width: 70%;
+    margin: auto;
+    padding: 100px 0 50px 0;
+    display: flex;
+}
+
+.profile-info-text {
+    flex: 70%;
+}
+
+.profile-upload-recipe-btn {
+    flex: 30%;
+}
+
+    .profile-upload-recipe-btn a {
+        background-color: var(--orange);
+        color: var(--vanilla-white);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 30px;
+    }
+
+        .profile-upload-recipe-btn a:hover {
+            background-color: var(--sarmon);
+            color: black;
+        }
+
+/* profile option */
+.private-profile-option {
+    width: 80%;
+    margin: 50px auto 0 auto;
+}
+
+    .private-profile-option .btn-group {
+        width: 100%;
+    }
+
+        .private-profile-option .btn-group .active {
+            background-color: var(--orange);
+            color: white;
+            border: none;
+            text-decoration: none;
+        }
+
+        .private-profile-option .btn-group .inactive {
+            background-color: none;
+            color: var(--orange);
+            border-color: var(--orange);
+            text-decoration: none;
+        }
+
+            .private-profile-option .btn-group .inactive:hover {
+                background-color: var(--sarmon);
+                color: black;
+                border-color: var(--sarmon);
+            }
+
+/* -- cooking history --  */
+
+.profile-history-wrap {
+    margin: 100px auto 100px auto;
+    width: 80%;
+}
+
+/* filter box */
+.profile-filter-box {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid var(--dark-brown);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+    .profile-filter-box .filter-btn {
+        background-color: var(--orange);
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+        .profile-filter-box .filter-btn:hover {
+            background-color: #ff6d3da8;
+            color: var(--black);
+        }
+
+    .profile-filter-box .btn-secondary {
+        color: white;
+    }
+
+/* cooking history table */
+.cooking-history img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.cooking-history span {
+    vertical-align: top;
+}
+
+.history-notes {
+    width: 350px;
+}
+
+.profile-history-wrap b {
+    color: black !important;
+    margin-left:5px
+}
+
+.profile-history-wrap .title {
+    text-decoration: none;
+    color: black !important;
+}
+
+.profile-history-wrap .title:hover {
+    text-decoration: underline;
+    color: black !important;
+}
+
+
+/*=== Admin Page Goh Kai Ling ===*/
+.admin-page {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 20px 20px 20px;
+}
+
+/* admin sidebar */
+.admin-nav {
+    flex: 20%;
+    height: 100%;
+    background-color: var(--sarmon);
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+    .admin-nav a,
+    .dropdown-btn {
+        width: 100%;
+        display: block;
+        color: black;
+        font-size: 12pt;
+        text-align: left;
+        padding: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+        .admin-nav a:hover,
+        .dropdown-btn:hover {
+            background-color: var(--orange);
+            color: white;
+        }
+
+    .admin-nav .active-btn {
+        background-color: var(--orange);
+        color: var(--vanilla-white);
+    }
+
+.dropdown-container {
+    display: none;
+    background-color: #ffdace;
+}
+
+    .dropdown-container a {
+        padding-left: 40px;
+    }
+
+.fa-caret-down {
+    color: black;
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .admin-page {
+        flex-direction: column;
+    }
+}
+
+/* admin hompage dashboard */
+.admin-content {
+    flex: 80%;
+    padding: 0 20px;
+}
+
+    .admin-content .row .col-sm-6 .card {
+        background-color: var(--vanilla-white);
+        margin-bottom: 20px;
+        box-shadow: 1px 2px var(--dark-brown);
+    }
+
+        .admin-content .row .col-sm-6 .card .card-body .btn-primary {
+            background-color: var(--orange);
+            border: none;
+        }
+
+            .admin-content .row .col-sm-6 .card .card-body .btn-primary:hover {
+                background-color: var(--dark-brown);
+            }
+
+        .admin-content .row .col-sm-6 .card .card-body .card-text .card-title {
+            font-size: 36pt;
+        }
+
+    /* admin table */
+    .admin-content .table-color {
+        --bs-table-bg: var(--vanilla-white);
+        --bs-table-striped-bg: #ff6d3da8;
+    }
+
+.table-link {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+    .table-link:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: black;
+    }
+/*.table a {
+    color: black;
+    display: block;
+}
+
+    .table a:hover,
+    .admin-enquiry-title:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }*/
+
+
+.admin-table-btn {
+    background-color: var(--dark-brown);
+    color: var(--vanilla-white);
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 3px;
+    float: right;
+    text-align: center;
+}
+
+    .admin-table-btn:hover {
+        background-color: rgb(114, 114, 114);
+        color: white;
+    }
+
+/* admin content */
+.admin-search-btn {
+    background-color: var(--orange);
+    color: var(--vanilla-white);
+    border: none;
+    border-radius: 3px;
+    padding: 2px 20px;
+}
+
+    .admin-search-btn:hover {
+        background-color: var(--dark-brown);
+    }
+
+.admin-recipe-approval-content {
+    border: 1px solid black;
+    margin-top: 25px;
+}
+
+.recipe-approval-action {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.recipe-approval-action-btn {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: 0 20px
+}
+
+    .recipe-approval-action-btn:hover {
+        background-color: var(--dark-brown);
+        color: white;
+    }
+
+/* admin enquiry modal */
+.reply-enquiry-btn-box {
+    text-align: center;
+}
+
+.reply-enquiry-btn {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+    .reply-enquiry-btn:hover {
+        background-color: var(--dark-brown);
+        color: white;
+    }
+
+/* ==============================HEADER CHRISTIAN==================== */
+
+.header-logo {
+    display: flex;
+}
+
+    .header-logo img {
+        width: 100px;
+    }
+
+    .header-logo h1 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+/* ====== LOGIN YURIKO GOTO ======= */
+#login-container {
+    width: 100%;
+    height: 100vh;
+    background: var(--sarmon) url(./assets/login-bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-wrap {
+    width: 30%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px rgb(88, 88, 88);
+}
+
+    .login-wrap h1 {
+        color: var(--orange);
+    }
+
+.login-btn {
+    background: var(--sarmon);
+    color: var(--vanilla-white);
+}
+
+    .login-btn:hover {
+        background: var(--orange);
+        color: var(--vanilla-white);
+    }
+
+.login-wrap a {
+    color: var(--orange);
+}
+
+.back-page {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background: var(--vanilla-white);
+    color: var(--orange);
+}
+
+    .back-page:hover {
+        background: var(--orange);
+        color: var(--vanilla-white);
+    }
+
+/* ====== SIGN UP ======= */
+#signup-container {
+    width: 100%;
+    height: 100vh;
+    background: var(--sarmon) url(./assets/signup-bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-wrap {
+    width: 50%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px rgb(88, 88, 88);
+}
+
+    .signup-wrap h1 {
+        color: var(--orange);
+    }
+
+.signup-btn {
+    background: var(--sarmon);
+    color: var(--vanilla-white);
+}
+
+    .signup-btn:hover {
+        background: var(--orange);
+        color: var(--vanilla-white);
+    }
+
+.signup-wrap a {
+    color: var(--orange);
+}
+
+/*=== Upload Recipe Yuriko Goto===*/
+.btn-back {
+    color: var(--orange);
+    border: solid 1px var(--orange);
+}
+
+    .btn-back:hover {
+        color: #ffffff;
+        background-color: var(--orange);
+    }
+
+.image-upload-elements {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2.5% 5%;
+    border-radius: 25px;
+}
+
+    .image-upload-elements h1,
+    .image-upload-elements p,
+    .image-upload-elements input {
+        margin-bottom: 10px;
+    }
+
+/* Add Ingredients and Steps  */
+.recipe-ingredient-add-btn,
+.recipe-ingredient-add-btn:hover,
+.recipe-step-add-btn,
+.recipe-step-add-btn:hover,
+.recipe-timer-add-btn,
+.recipe-timer-add-btn:hover,
+.uploadRecipeResetBtn,
+.uploadRecipeResetBtn:hover,
+.uploadRecipeSubmitBtn,
+.uploadRecipeSubmitBtn:hover {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+#recipe-ingredient-list,
+#recipe-step-list {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+}
+
+    #recipe-ingredient-list li,
+    #recipe-step-list li {
+        background-color: #fff;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+        /* All lists except for last list */
+        #recipe-ingredient-list li:not(:last-of-type),
+        #recipe-step-list li:not(:last-of-type) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+.recipe-ingredient-delete,
+.recipe-step-delete,
+.recipe-timer-delete {
+    color: var(--dark-brown);
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#recipe-step-list {
+    margin: 0;
+    list-style: none;
+    counter-reset: recipe-step-number;
+}
+
+    #recipe-step-list li {
+        position: relative;
+        margin-left: 2.5em;
+        padding-top: 0.8em;
+    }
+
+        #recipe-step-list li::before {
+            counter-increment: recipe-step-number;
+            content: counter(recipe-step-number);
+            /* step list number decoration */
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 10px;
+            margin-top: 0.9em;
+            font-size: 16px;
+            background-color: var(--dark-brown);
+            color: #fff;
+            line-height: 25px;
+        }
+
+/* === FAQ Goh Kai Ling ===*/
+.faq {
+    width: 70%;
+    margin: 120px auto 100px auto;
+}
+
+.faq-title {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.faq-btn,
+.faq-btn:visited,
+.faq-btn:active,
+.faq-btn:focus {
+    background-color: var(--dark-brown);
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 20px 50px 20px 20px;
+    margin: 5px 0;
+}
+
+    .faq-btn:hover {
+        background-color: rgba(84, 73, 75, 0.777);
+        color: white;
+    }
+
+    .faq-btn i {
+        float: right;
+    }
+
+.faq .collapse .card {
+    margin: 0;
+    background-color: var(--sarmon);
+}
+
+.enquiry-send-btn {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin-top: 30px;
+}
+
+    .enquiry-send-btn:hover {
+        background-color: #ff6d3da8;
+        color: var(--black);
+    }
+
+.sign-in-btn {
+    color: white;
+    background-color: var(--orange);
+}
+
+    .sign-in-btn:hover {
+        color: white;
+        background-color: var(--orange);
+    }
+
+.sign-up-caption {
+    font-size: 2em;
+}
+
+.edit-btn,
+.delete-btn,
+.report-btn,
+.clear-btn{
+    background: var(--orange);
+    color: white;
+    margin-left: 15px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.report-btn:hover,
+.clear-btn:hover{
+    background-color: #ff6d3da8;
+    border-color: #ff6d3da8;
+    color: var(--black);
+}
+
+/*==Cooking Session==*/
+.start-cooking-session-bg {
+    background-image: url(./ASSETS/undraw_cooking_lyxy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+.start-cooking-session-bg-white {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start_cooking_session_btn {
+    background-color: var(--orange);
+    color: var(--vanilla-white);
+}
+
+    #start_cooking_session_btn:hover {
+        background-color: var(--vanilla-white);
+        color: var(--dark-brown);
+        font-weight: bold;
+        border: none;
+    }
+
+.timer-cooking-session-bg {
+    margin: 0;
+    background-color: #000;
+}
+
+    .timer-cooking-session-bg p {
+        background-color: #fff;
+        color: #000;
+        display: var(--text-color);
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        margin: 0;
+        height: 70px;
+        width: 200px;
+    }
+
+.timer-bg {
+    background-color: #ffbfaa;
+    background-image: url(./ASSETS/foodiesfeed.com_fresh-oranges.jpg);
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.timer-wrap {
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 2% 2%;
+    box-shadow: 2px 2px 5px gray;
+    position: relative;
+}
+
+.takeNote-wrap {
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 4% 2%;
+    box-shadow: 2px 2px 5px gray;
+    position: relative;
+}
+
+#countdown {
+    text-align: center;
+    font-family: digitalTimer;
+    font-size: 8em;
+    color: #ff6f3d;
+    margin: auto;
+    display: block;
+}
+
+.timer_message {
+    font-size: 2em;
+}
+
+.timer_go_back {
+    background-color: #ff6f3d;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+}
+
+    .timer_go_back:hover,
+    .timer_go_back:hover {
+        background-color: #ffdace;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        color: #54494b;
+        border: none;
+    }
+
+#lets_timer_go_back {
+    color: #ff6f3d;
+}
+
+    #lets_timer_go_back:hover {
+        color: #ff6f3d;
+        text-decoration: underline;
+    }
+
+#recipe_step_desc {
+    font-size: 1.5em;
+}
+
+.timer-bg-white {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+#previousBtn,
+#previousBtn:focus,
+#nextBtn,
+#nextBtn:focus,
+#finishBtn,
+#finishBtn:focus,
+.stop-audio-btn,
+.stop-audio-btn :focus {
+    background-color: #ff6f3d;
+    color: white;
+    border: none !important;
+}
+
+    #previousBtn:hover,
+    #previousBtn:active,
+    #nextBtn:hover,
+    #nextBtn:active,
+    #finishBtn:hover,
+    #finishBtn:active,
+    .stop-audio-btn:hover,
+    .stop-audio-btn :focus {
+        background-color: #ffbfaa;
+        color: #54494b;
+        border: none !important;
+    }
+
+.progress-bg {
+    background-color: #ffbfaa;
+    background-image: url(./ASSETS/foodiesfeed.com_oranges-with-ice.jpg);
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.progress-wrap {
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 3.5% 2%;
+    box-shadow: 2px 2px 5px gray;
+    position: relative;
+}
+
+.takeNote-bg {
+    background-color: #ffbfaa;
+    background-image: url(./ASSETS/foodiesfeed.com_forest-fruit-waffle.jpg);
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.submit-cooking-session-btn,
+.submit-cooking-session-btn:hover {
+    background: #ff6f3d;
+    color: white;
+}
+
+.go_to_timer_btn {
+    border: 2px solid #ff6f3d;
+    color: #ff6f3d;
+    background: none;
+    margin-top: 5px;
+}
+
+    .go_to_timer_btn:hover {
+        border: 2px solid #ff6f3d;
+        color: white;
+        background: #ff6f3d;
+    }
