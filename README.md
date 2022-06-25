@@ -70,10 +70,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - Test Serverside Scirpt and Database
 - Deployement
 
-## Team
+## Team (Credit)
 - Christian Nathaniel Tjandra
 - Goh Kailing
 - Yuriko Goto
-
-## Licnese
-[MIT License](https://github.com/gotoyuriko/dishaday/issues/new)
