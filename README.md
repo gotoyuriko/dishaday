@@ -67,10 +67,10 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - Enhance Accessibility
   - Create Recipe
   - Cooking Session
-- Test Serverside Scirpt and Database
-- Deployement
+- Test Serverside Script and Database
+- Deployment
 
 ## Team
 - Christian Nathaniel Tjandra
-- Goh Kailing
+- Goh Kai Ling
 - Yuriko Goto
